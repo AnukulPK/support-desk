@@ -5,7 +5,7 @@ import { FaQuestionCircle, FaTicketAlt } from "react-icons/fa";
 const Home = () => {
   return (
     <>
-      <section classname="heading">
+      <section className="heading">
         <h1>What do you need help with?</h1>
         <p>Please choose from option below</p>
       </section>

@@ -1,4 +1,3 @@
-import e from "express";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
@@ -9,7 +8,7 @@ const NewTicket = () => {
   const [description, setDescription] = useState("");
   const [product, setProduct] = useState("");
 
-  const onSubmit = () => {
+  const onSubmit = (e) => {
     e.preventDefault();
   };
 

@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { FaPlus } from "react-icons/fa";
 import { getTicket, reset, closeTicket } from "../features/tickets/ticketSlice";
-import { getNotes, reset as noteReset } from "../features/notes/noteSlice";
+import {
+  getNotes,
+  createNote,
+  reset as noteReset,
+} from "../features/notes/noteSlice";
 import BackButton from "../components/BackButton";
 import Spinner from "../components/Spinner";
 import { toast } from "react-toastify";
@@ -59,7 +63,7 @@ const Ticket = () => {
   const onNoteSubmit = (e) => {
     e.preventDefault();
 
-    console.log("Submit");
+    dispatch(createNote({ noteText, ticketId }));
     closeModal();
   };
 
